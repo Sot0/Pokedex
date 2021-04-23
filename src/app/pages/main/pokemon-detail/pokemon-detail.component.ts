@@ -13,7 +13,6 @@ export class PokemonDetailComponent implements OnInit {
   constructor(
     private _store: Store<AppStateI>
   ) {
-    
   }
 
   ngOnInit(): void {

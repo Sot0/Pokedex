@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { PokeapiService } from '../../../services/pokeapi.service';
-import { PokeapiResultI, PokemonPaginationI, PokemonI, AppStateI } from '../../../interfaces/models';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { Action, Store } from '@ngrx/store';
-import { SET_BUSQUEDA_POKEMON, SET_PAGE_SELECTED } from '../../../ngrx/actions/pokemon.action';
 import { mergeMap, concatMap, map, tap } from 'rxjs/operators';
+import { PokemonPaginationI, PokemonI, AppStateI } from '../../../interfaces/models';
+import { PokeapiService } from '../../../services/pokeapi.service';
+import { SET_PAGE_SELECTED } from '../../../ngrx/actions/pokemon.action';
 
 @Component({
   selector: 'app-catalog',
@@ -23,7 +22,6 @@ export class CatalogComponent implements OnInit {
 
   constructor(
     private _pokemonService: PokeapiService,
-    private _snackBar: MatSnackBar,
     private _store: Store<AppStateI>,
   ) { }
 
