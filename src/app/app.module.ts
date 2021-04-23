@@ -15,6 +15,8 @@ import { AppComponent } from './app.component';
 
 import * as userReducer from './ngrx/reducers/user.reducer';
 import * as pokemonReducer from './ngrx/reducers/pokemon.reducer';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,13 @@ import * as pokemonReducer from './ngrx/reducers/pokemon.reducer';
     SharedModule,
     FlexLayoutModule,
     
-    StoreModule.forRoot({ userData: userReducer.reducer, pokemonData: pokemonReducer.reducer })
+    StoreModule.forRoot({ userData: userReducer.reducer, pokemonData: pokemonReducer.reducer }),
+         ServiceWorkerModule.register('ngsw-worker.js', {
+           enabled: environment.production,
+           // Register the ServiceWorker as soon as the app is stable
+           // or after 30 seconds (whichever comes first).
+           registrationStrategy: 'registerWhenStable:30000'
+         })
   ],
   providers: [],
   bootstrap: [AppComponent]
