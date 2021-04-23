@@ -12,6 +12,7 @@ import { MatChipsModule } from '@angular/material/chips';
 
 import { FormsModule } from '@angular/forms';
 import { PokemonItemComponent } from './pokemon-item/pokemon-item.component';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PokemonItemComponent } from './pokemon-item/pokemon-item.component';
     MatToolbarModule,
     MatIconModule,
     MatInputModule,
-    MatChipsModule
+    MatChipsModule,
+    MatBadgeModule
   ],
   exports: [
     NavbarComponent,
