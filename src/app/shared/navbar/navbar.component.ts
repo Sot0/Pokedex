@@ -1,8 +1,6 @@
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, Input, OnInit } from '@angular/core';
 import { Store, Action } from '@ngrx/store';
 import { AppStateI, UserI } from '../../interfaces/models';
-import { SET_INFO_USUARIO } from '../../ngrx/actions/user.action';
 import { SET_BUSQUEDA_POKEMON } from '../../ngrx/actions/pokemon.action';
 
 @Component({
@@ -13,7 +11,6 @@ import { SET_BUSQUEDA_POKEMON } from '../../ngrx/actions/pokemon.action';
 export class NavbarComponent implements OnInit {
   @Input('isNavbar') isNavbar = true;
   username: string;
-
   searchValue: string;
 
   constructor(

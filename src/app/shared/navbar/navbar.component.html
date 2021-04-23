@@ -1,12 +1,12 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <button mat-flat-button class="logo">
+        <button mat-flat-button class="logo" [routerLink]="['/']">
             <img src="assets/pokeball.png">
         </button>
         <span>Pokedex <small *ngIf="username">Entrenador: {{username}}</small></span>
         <span class="spacer"></span>
-        <button mat-icon-button aria-label="Profile menu">
-            <mat-icon>menu</mat-icon>
+        <button mat-icon-button aria-label="Profile menu" [routerLink]="['/profile']">
+            <mat-icon>account_circle</mat-icon>
         </button>
     </mat-toolbar-row>
     <mat-toolbar-row *ngIf="isNavbar">

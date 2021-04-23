@@ -1,0 +1,23 @@
+.main-container {
+    background-color: #96e1dd !important;
+    min-height: 100%;
+}
+
+.profile-pic {
+    border-radius: 50% !important;
+    margin-bottom: 20px;
+    max-width: 200px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.profile-card {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    margin: 20PX;
+    background-color: #5c6bc0;
+    max-width: 400px;
+    color: #fff;
+}

@@ -1,1 +1,20 @@
-<p>profile works!</p>
+<app-navbar [isNavbar]="false"></app-navbar>
+
+<div class="main-container" fxLayout="row wrap" fxLayoutAlign="center start">
+
+    <mat-card class="profile-card" fxFlex.xs="100" fxFlex.sm="70" fxFlex.md="50" fxFlex.lg="50" fxLayoutAlign="center center" fxLayout="row wrap">
+        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+        <div fxFlex="100" class="text-center">
+            <img class="profile-pic" src="assets/profile_pic_default.png">
+        </div>
+        <mat-card-content class="text-center">
+            <h1 class="title"><strong>{{user.name}}</strong></h1>
+            <h2>Edad: {{user.age}} años</h2>
+            <h4>Nombre de entrenador: {{user.username}}</h4>
+            <h4>Correo electrónico: {{user.email}}</h4>
+        </mat-card-content>
+        <mat-card-actions class="text-center">
+            <p>Para ser un maestro pokemon es necesario conocer todos los pokemons y sus características, con esta pokedex, ¡tú también podrás hacerlo!</p>
+        </mat-card-actions>
+      </mat-card>
+</div>

@@ -3,7 +3,7 @@ import { PokeapiService } from '../../../services/pokeapi.service';
 import { PokeapiResultI, PokemonPaginationI, PokemonI, AppStateI } from '../../../interfaces/models';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Action, Store } from '@ngrx/store';
-import { SET_PAGE_SELECTED } from '../../../ngrx/actions/pokemon.action';
+import { SET_BUSQUEDA_POKEMON, SET_PAGE_SELECTED } from '../../../ngrx/actions/pokemon.action';
 import { mergeMap, concatMap, map, tap } from 'rxjs/operators';
 
 @Component({
@@ -55,7 +55,6 @@ export class CatalogComponent implements OnInit {
       })
     )
       .subscribe((resp: any) => {
-        console.log(resp);
         this.pokemons.push(resp);
         this.paginationOptions.length = this._pokemonService.totalItems;
       }, () => this.pokemons = [])

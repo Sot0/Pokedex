@@ -13,6 +13,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { FormsModule } from '@angular/forms';
 import { PokemonItemComponent } from './pokemon-item/pokemon-item.component';
 import { MatBadgeModule } from '@angular/material/badge';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { MatBadgeModule } from '@angular/material/badge';
   imports: [
     CommonModule,
     FormsModule,
+    RouterModule,
 
     MatButtonModule,
     MatDividerModule,
