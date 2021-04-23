@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-flat-button class="logo">
+            <img src="assets/pokeball.png">
+        </button>
+        <span>Pokedex <small *ngIf="username">Entrenador: {{username}}</small></span>
+        <span class="spacer"></span>
+        <button mat-icon-button aria-label="Profile menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </mat-toolbar-row>
+    <mat-toolbar-row *ngIf="isNavbar">
+        <mat-form-field>
+            <mat-label>Busca por nombre o número de pokemon</mat-label>
+            <input matInput type="text" [(ngModel)]="searchValue" autocomplete="false" autocomplete="off">
+            <button mat-button matSuffix mat-icon-button aria-label="search" (click)="searchPokemon()">
+              <mat-icon>search</mat-icon>
+            </button>
+          </mat-form-field>
+    </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,13 @@
+<div fxLayout="row wrap" [style.backgroundColor]="getColor(pokemon.types)" class="pokemon-item" (click)="pokemonSelected()">
+    <div fxFlex="100" class="img-container">
+        <img [src]="pokemon.sprites.front_default" fxFlex="100">
+    </div>
+    <div fxFlex="100" class="name-container">
+        <h1>#{{pokemon.id}} {{pokemon.name}}</h1>
+    </div>
+    <div fxFlex="100" fxFlex="100" fxLayout="row wrap" fxLayoutAlign="space-around center" class="mat-chip-container">
+        <mat-chip-list>
+            <mat-chip *ngFor="let type of pokemon.types">{{type.type.name}}</mat-chip>
+        </mat-chip-list>
+    </div>
+</div>
