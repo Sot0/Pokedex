@@ -12,24 +12,24 @@ const routes: Routes = [
   },
   {
     path: 'detail',
-    component: PokemonDetailComponent
+    component: PokemonDetailComponent,
   },
   {
     path: 'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
   },
   {
     path: 'not-found',
-    component: NotFoundComponent
+    component: NotFoundComponent,
   },
   {
     path: '**',
-    redirectTo: 'not-found'
-  }
+    redirectTo: 'not-found',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class PagesRoutingModule { }
+export class PagesRoutingModule {}

@@ -16,10 +16,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PokemonItemComponent } from './pokemon-item/pokemon-item.component';
 
 @NgModule({
-  declarations: [
-    NavbarComponent,
-    PokemonItemComponent,
-  ],
+  declarations: [NavbarComponent, PokemonItemComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -31,11 +28,8 @@ import { PokemonItemComponent } from './pokemon-item/pokemon-item.component';
     MatIconModule,
     MatInputModule,
     MatChipsModule,
-    MatBadgeModule
+    MatBadgeModule,
   ],
-  exports: [
-    NavbarComponent,
-    PokemonItemComponent,
-  ]
+  exports: [NavbarComponent, PokemonItemComponent],
 })
-export class SharedModule { }
+export class SharedModule {}

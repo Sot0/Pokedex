@@ -19,9 +19,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -32,16 +30,19 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     SharedModule,
     FlexLayoutModule,
-    
-    StoreModule.forRoot({ userData: userReducer.reducer, pokemonData: pokemonReducer.reducer }),
-         ServiceWorkerModule.register('ngsw-worker.js', {
-           enabled: environment.production,
-           // Register the ServiceWorker as soon as the app is stable
-           // or after 30 seconds (whichever comes first).
-           registrationStrategy: 'registerWhenStable:30000'
-         })
+
+    StoreModule.forRoot({
+      userData: userReducer.reducer,
+      pokemonData: pokemonReducer.reducer,
+    }),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

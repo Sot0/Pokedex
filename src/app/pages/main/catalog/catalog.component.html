@@ -1,15 +1,24 @@
 <app-navbar></app-navbar>
 
 <div class="container">
-    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
-        <h1 *ngIf="!pokemons.length">No hay resultados</h1>
-        <div *ngFor="let pokemon of pokemons" fxFlex.xs="50" fxFlex.sm="30" fxFlex.lg="15">
-            <app-pokemon-item [pokemon]="pokemon"></app-pokemon-item>
-        </div>
+  <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+    <h1 *ngIf="!pokemons.length">No hay resultados</h1>
+    <div
+      *ngFor="let pokemon of pokemons"
+      fxFlex.xs="50"
+      fxFlex.sm="30"
+      fxFlex.lg="15"
+    >
+      <app-pokemon-item [pokemon]="pokemon"></app-pokemon-item>
     </div>
-    
-    <div fxLayout="row" fxLayoutAlign="center center">
-        <mat-paginator [length]="paginationOptions.length" [pageSize]="paginationOptions.pageSize" [pageSizeOptions]="paginationOptions.pageSizeOptions" (page)="pageChange($event)"></mat-paginator>
-    </div>
-</div>
+  </div>
 
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <mat-paginator
+      [length]="paginationOptions.length"
+      [pageSize]="paginationOptions.pageSize"
+      [pageSizeOptions]="paginationOptions.pageSizeOptions"
+      (page)="pageChange($event)"
+    ></mat-paginator>
+  </div>
+</div>

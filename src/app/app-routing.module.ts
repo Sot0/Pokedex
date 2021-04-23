@@ -2,17 +2,19 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-    {
-        path: '',
-        loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
-    },
-    {
-        path: '**', redirectTo: '404'
-    }
+  {
+    path: '',
+    loadChildren: () =>
+      import('./pages/pages.module').then((m) => m.PagesModule),
+  },
+  {
+    path: '**',
+    redirectTo: '404',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

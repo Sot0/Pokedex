@@ -1,18 +1,19 @@
 .spacer {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .logo {
-    padding: 0px !important;
-    background-color: transparent;
+  padding: 0px !important;
+  background-color: transparent;
 }
 
-.logo, img {
-    height: 45px;
-    width: 45px;
+.logo,
+img {
+  height: 45px;
+  width: 45px;
 }
 
 mat-form-field {
-    max-width: 100%;
-    width: 100%;
+  max-width: 100%;
+  width: 100%;
 }

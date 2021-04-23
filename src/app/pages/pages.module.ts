@@ -26,7 +26,7 @@ import { PokeapiService } from '../services/pokeapi.service';
     ProfileComponent,
     CatalogComponent,
     PokemonDetailComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     CommonModule,
@@ -42,10 +42,8 @@ import { PokeapiService } from '../services/pokeapi.service';
     MatListModule,
     MatIconModule,
     MatBadgeModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
   ],
-  providers: [
-    PokeapiService
-  ]
+  providers: [PokeapiService],
 })
-export class PagesModule { }
+export class PagesModule {}

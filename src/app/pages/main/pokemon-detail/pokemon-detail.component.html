@@ -1,55 +1,67 @@
 <app-navbar [isNavbar]="false"></app-navbar>
 <div class="container" *ngIf="pokemon" fxLayout="row wrap">
-    <div fxFlex.xs="100" fxFlex.sm="50" fxFlex.lg="35" class="column-main-info" [style.backgroundColor]="getColor(pokemon.types)">
-        <div class="container-image">
-            <img [src]="pokemon.sprites.front_default">
-        </div>
-        <mat-card class="card-name">
-            <h1 [matBadge]="pokemon.order" matBadgeSize="large"><strong>{{pokemon.name}}</strong></h1>
-        </mat-card>
-        <mat-chip-list class="container-mat-chip">
-            <mat-chip *ngFor="let type of pokemon.types">{{type.type.name}}</mat-chip>
-        </mat-chip-list>
-        <mat-button-toggle-group class="toggle-container">
-            <mat-button-toggle>Pesp: {{pokemon.height}}</mat-button-toggle>
-            <mat-button-toggle>Altura: {{pokemon.height}}</mat-button-toggle>
-            <mat-button-toggle>Exp, base {{pokemon.base_experience}}</mat-button-toggle>
-          </mat-button-toggle-group>
+  <div
+    fxFlex.xs="100"
+    fxFlex.sm="50"
+    fxFlex.lg="35"
+    class="column-main-info"
+    [style.backgroundColor]="getColor(pokemon.types)"
+  >
+    <div class="container-image">
+      <img [src]="pokemon.sprites.front_default" />
     </div>
-    <div fxFlex.xs="100" fxFlex.sm="50">
-        <mat-tab-group>
-            <mat-tab label="Habilidades">
-                <mat-list role="list">
-                    <span *ngFor="let ability of pokemon.abilities; let i = index;">
-                        <mat-list-item role="listitem" *ngIf="i < 15">
-                            <mat-icon mat-list-icon>grade</mat-icon>
-                            <div mat-line>{{i + 1}} - {{ability.ability.name}}</div>
-                        </mat-list-item>
-                    </span>
-                    </mat-list>
-            </mat-tab>
-            <mat-tab label="Movimientos">
-                <mat-list role="list">
-                    <span *ngFor="let move of pokemon.moves; let i = index;">
-                        <mat-list-item role="listitem" *ngIf="i < 15">
-                            <mat-icon mat-list-icon>track_changes</mat-icon>
-                            <div mat-line>{{i + 1}} - {{move.move.name}}</div>
-                        </mat-list-item>
-                    </span>
-                    </mat-list>
-            </mat-tab>
-            <mat-tab label="Apariciones">
-                <mat-list role="list">
-                    <span *ngFor="let game of pokemon.game_indices; let i = index;">
-                        <mat-list-item role="listitem" *ngIf="i < 15">
-                            <mat-icon mat-list-icon>sports_esports</mat-icon>
-                            <div mat-line>{{i + 1}} - {{game.version.name}}</div>
-                        </mat-list-item>
-                    </span>
-                    </mat-list>
-            </mat-tab>
-            </mat-tab-group>
-    </div>
+    <mat-card class="card-name">
+      <h1 [matBadge]="pokemon.order" matBadgeSize="large">
+        <strong>{{ pokemon.name }}</strong>
+      </h1>
+    </mat-card>
+    <mat-chip-list class="container-mat-chip">
+      <mat-chip *ngFor="let type of pokemon.types">{{
+        type.type.name
+      }}</mat-chip>
+    </mat-chip-list>
+    <mat-button-toggle-group class="toggle-container">
+      <mat-button-toggle>Pesp: {{ pokemon.height }}</mat-button-toggle>
+      <mat-button-toggle>Altura: {{ pokemon.height }}</mat-button-toggle>
+      <mat-button-toggle
+        >Exp, base {{ pokemon.base_experience }}</mat-button-toggle
+      >
+    </mat-button-toggle-group>
+  </div>
+  <div fxFlex.xs="100" fxFlex.sm="50">
+    <mat-tab-group>
+      <mat-tab label="Habilidades">
+        <mat-list role="list">
+          <span *ngFor="let ability of pokemon.abilities; let i = index">
+            <mat-list-item role="listitem" *ngIf="i < 15">
+              <mat-icon mat-list-icon>grade</mat-icon>
+              <div mat-line>{{ i + 1 }} - {{ ability.ability.name }}</div>
+            </mat-list-item>
+          </span>
+        </mat-list>
+      </mat-tab>
+      <mat-tab label="Movimientos">
+        <mat-list role="list">
+          <span *ngFor="let move of pokemon.moves; let i = index">
+            <mat-list-item role="listitem" *ngIf="i < 15">
+              <mat-icon mat-list-icon>track_changes</mat-icon>
+              <div mat-line>{{ i + 1 }} - {{ move.move.name }}</div>
+            </mat-list-item>
+          </span>
+        </mat-list>
+      </mat-tab>
+      <mat-tab label="Apariciones">
+        <mat-list role="list">
+          <span *ngFor="let game of pokemon.game_indices; let i = index">
+            <mat-list-item role="listitem" *ngIf="i < 15">
+              <mat-icon mat-list-icon>sports_esports</mat-icon>
+              <div mat-line>{{ i + 1 }} - {{ game.version.name }}</div>
+            </mat-list-item>
+          </span>
+        </mat-list>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
 </div>
 
 <!-- height, weight, base_experience-->
